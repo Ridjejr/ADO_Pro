@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{739B023F-3296-4C6A-B227-CDE814A739B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ADO_Pro</RootNamespace>
+    <AssemblyName>ADO_Pro</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.0.31\Assemblies\v4.8\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adherent.cs" />
+    <Compile Include="Auteur.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="FicheAdherent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FicheAdherent.Designer.cs">
+      <DependentUpon>FicheAdherent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FicheAuteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FicheAuteur.Designer.cs">
+      <DependentUpon>FicheAuteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FicheGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FicheGenre.Designer.cs">
+      <DependentUpon>FicheGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FicheLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FicheLivre.Designer.cs">
+      <DependentUpon>FicheLivre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genre.cs" />
+    <Compile Include="listeAdherents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listeAdherents.Designer.cs">
+      <DependentUpon>listeAdherents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeGenres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeGenres.Designer.cs">
+      <DependentUpon>ListeGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeAuteurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeAuteurs.Designer.cs">
+      <DependentUpon>ListeAuteurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeLivres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeLivres.Designer.cs">
+      <DependentUpon>ListeLivres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Livre.cs" />
+    <Compile Include="ManagerAdherent.cs" />
+    <Compile Include="ManagerAuteur.cs" />
+    <Compile Include="ManagerGenre.cs" />
+    <Compile Include="ManagerLivre.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FicheAdherent.resx">
+      <DependentUpon>FicheAdherent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicheAuteur.resx">
+      <DependentUpon>FicheAuteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicheGenre.resx">
+      <DependentUpon>FicheGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicheLivre.resx">
+      <DependentUpon>FicheLivre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listeAdherents.resx">
+      <DependentUpon>listeAdherents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeAuteurs.resx">
+      <DependentUpon>ListeAuteurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeGenres.resx">
+      <DependentUpon>ListeGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeLivres.resx">
+      <DependentUpon>ListeLivres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\Adherent.datasource" />
+    <None Include="Properties\DataSources\Auteur.datasource" />
+    <None Include="Properties\DataSources\Genre.datasource" />
+    <None Include="Properties\DataSources\Livre.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
